@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Process">
+      <UniqueIdentifier>{d9d0a2e7-c08b-435d-b0b5-c59d49d96180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{cffd0b4a-c463-4191-9d71-fa12f407a668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compile">
+      <UniqueIdentifier>{c8242694-d56f-4486-8450-95e28a05fb8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugin">
+      <UniqueIdentifier>{a6bb83cf-0cc0-45c1-8e93-780167a3229b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CoreProcessGlobal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClCompile Include="CoreProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="CoreProcess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="XProcess.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="XScript.cpp">
+      <Filter>Script</Filter>
+    </ClCompile>
+    <ClCompile Include="XCompile.cpp">
+      <Filter>Compile</Filter>
+    </ClCompile>
+    <ClCompile Include="XPlugin.cpp">
+      <Filter>Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="XArgs.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="XConsole.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="XProcess.h">
+      <Filter>Process</Filter>
+    </QtMoc>
+    <QtMoc Include="XScript.h">
+      <Filter>Script</Filter>
+    </QtMoc>
+    <QtMoc Include="XCompile.h">
+      <Filter>Compile</Filter>
+    </QtMoc>
+    <QtMoc Include="XPlugin.h">
+      <Filter>Plugin</Filter>
+    </QtMoc>
+    <QtMoc Include="XArgs.h">
+      <Filter>Process</Filter>
+    </QtMoc>
+    <QtMoc Include="XConsole.h">
+      <Filter>Process</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>
