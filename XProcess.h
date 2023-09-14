@@ -17,6 +17,12 @@ namespace CoreProcess
 // Context: DefaultNamespace
 // Class:   XProcess
 // Method:  XProcess
+// Description: The XProcess class provides functionality to execute other
+// processes, manipulate environment variables, and redirect standard input,
+// output, and error. It contains methods such as setPath, setExecutable,
+// args, env, and cmd which allow for the customization of the process execution.
+// Additionally, it provides the ability to pack and unpack data using the
+// pack and unPack methods.
 //----------------------------------------------------------------------------- 
 	
 class COREPROCESS_EXPORT XProcess  : public QObject

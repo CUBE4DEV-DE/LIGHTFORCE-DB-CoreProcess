@@ -17,6 +17,18 @@ namespace CoreProcess
 	// Context: DefaultNamespace
 	// Class:   XPlugin
 	// Method:  XPlugin
+	// Description:
+	// The XPlugin class is responsible for loading, unloading, and calling plugin
+	// files, which are libraries that extend the functionality of the application.
+	// The XPlugin class contains several methods for working with plugins,
+	// including methods, call, and unLoad.The methods method returns a list of
+	// the available methods inside a specified plugin, while call calls a
+	// specific method with given parameters.Finally, unLoad unloads a plugin
+	// from memory.
+	// 	The XPlugin class contains a static member variable m_Plugins, which is a
+	// 	QMap that stores the loaded plugin files with their file names as keys.
+	// 	This allows the application to reuse the loaded plugins instead of
+	// 	reloading them every time they are needed.
 	//----------------------------------------------------------------------------- 
 
 	class COREPROCESS_EXPORT XPlugin : public QObject

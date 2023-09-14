@@ -18,6 +18,21 @@ namespace CoreProcess
 	// Context: DefaultNamespace
 	// Class:   XProcessCommand
 	// Method:  XProcessCommand
+	// Description: 
+	// The XArgs class contains several methods and slots, including exec(), args(),
+	// command(), and call().The exec() method takes a QStringList as an argument
+	// and can execute that list as arguments for a command, while the args()
+	// method takes a QCoreApplication object and returns a QStringList of command - line arguments.
+	// The command() method takes a QStringList and checks to see if it matches any
+	// of the predefined commands like ping(), copy(), sync() orcommand().
+	// The slots processPing(), processCopy(), and processSync() all return a
+	// QByteArray and are called when the corresponding command is executed.
+	// The XArgs class also contains a private method process() which
+	// essentially runs a command as a subprocess, passing in certain
+	// arguments and a boolean to determine whether the subprocess should
+	// be executed asynchronously or not.
+	// Overall, the XArgs class is a command - line tool that facilitates the
+	// functionality of the CoreProcess namespace.
 	//----------------------------------------------------------------------------- 
 
 	class COREPROCESS_EXPORT XArgs : public QObject

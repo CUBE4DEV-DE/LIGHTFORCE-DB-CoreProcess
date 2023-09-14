@@ -1,0 +1,98 @@
+
+COREPROCESS
+===========
+The CoreProcess module is a wrapper module in the Core library that
+provides an interface to access external libraries and programs. 
+It contains various service functions to pass application arguments. 
+The module is composed of several classes such as XProcess, XConsole, 
+XScript, XArgs, XPlugin and XCompile, each with a specific responsibility.
+XProcess provides functionality to execute other processes, manipulate
+environment variables, and redirect standard input, output, and error.
+XConsole is responsible for printing text and debugging information to the console.
+XScript handles the execution of JavaScript code, while XArgs is a 
+command-line tool that facilitates the functionality of the CoreProcess namespace.
+XPlugin enables the loading, unloading, and calling of plugin files, 
+which are libraries that extend the functionality of the application.
+Finally, XCompile is responsible for compiling files.
+Overall, the CoreProcess module provides a set of classes that enable the
+integration of external libraries and programs with the Core library,
+making it easier to develop complex software systems.
+
+
+XProcess
+--------
+The XProcess class provides functionality to execute other
+processes, manipulate environment variables, and redirect standard input,
+output, and error. It contains methods such as setPath, setExecutable,
+args, env, and cmd which allow for the customization of the process execution.
+Additionally, it provides the ability to pack and unpack data using the
+pack and unPack methods.
+
+XConsole
+--------
+The XConsole class is part of the CoreProcess namespace.
+It is responsible for printing text and debugging
+information to the console.It contains several static functions,
+such as print and debug, which take parameters of type QVariant,
+QStringList, QMap<QString, QVariant>, and QMap<QString, QString>.
+The XConsole class also contains a static boolean variable m_Silent,
+which can be used to mute or unmute console output.The class uses
+QTextStream to output text to the console, which can be accessed
+by other classes as well.
+This class is useful for debugging and general information
+output in the CoreProcess namespace.
+
+
+XScript
+-------
+The XScript class is a part of the CoreProcess namespace and
+it is a subclass of QObject. It has several methods like execute(),
+command(), include(), and insert() which are used to handle the
+execution of JavaScript code.
+
+XArgs
+-----
+The XArgs class contains several methods and slots, including exec(), args(),
+command(), and call().The exec() method takes a QStringList as an argument
+and can execute that list as arguments for a command, while the args()
+method takes a QCoreApplication object and returns a QStringList of command - line arguments.
+The command() method takes a QStringList and checks to see if it matches any
+of the predefined commands like ping(), copy(), sync() orcommand().
+The slots processPing(), processCopy(), and processSync() all return a
+QByteArray and are called when the corresponding command is executed.
+The XArgs class also contains a private method process() which
+essentially runs a command as a subprocess, passing in certain
+arguments and a boolean to determine whether the subprocess should
+be executed asynchronously or not.
+Overall, the XArgs class is a command - line tool that facilitates the
+functionality of the CoreProcess namespace.
+
+XPlugin
+-------
+The XPlugin class is responsible for loading, unloading, and calling plugin
+files, which are libraries that extend the functionality of the application.
+The XPlugin class contains several methods for working with plugins,
+including methods, call, and unLoad.The methods method returns a list of
+the available methods inside a specified plugin, while call calls a
+specific method with given parameters.Finally, unLoad unloads a plugin
+from memory.
+The XPlugin class contains a static member variable m_Plugins, which is a
+QMap that stores the loaded plugin files with their file names as keys.
+This allows the application to reuse the loaded plugins instead of
+reloading them every time they are needed.
+
+XCompile
+--------
+The XCompile class is a part of the CoreProcess library in C++, which is
+responsible for compiling files.It has a method called compile that takes
+three parameters : filename, configuration, and platform.These parameters
+define the file name of the file to be compiled, the configuration to be
+used, and the platform to be targeted, respectively.
+The class contains a member variable called m_Build, which is used to
+store the build configuration.If the m_Build variable is empty, the
+compile method will return false.Otherwise, the XProcess class is used
+to set up a process for compiling the file.The process object
+subsequently runs the compilation process by running the file passed in,
+and stores its output in m_Output and error messages in m_Error.If the
+m_Error variable is not empty, then the compile function will return false.
+
